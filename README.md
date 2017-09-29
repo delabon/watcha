@@ -29,15 +29,14 @@ exports.settings = {
 
 ### One command line to rule them all
 ```sh
-node watcha
+$ node watcha
 ```
 
 ### Installation
 
 ```sh
-$ cd dillinger
-$ npm install -d
-$ node app
+$ cd watcha
+$ npm install
 ```
 
 ### License
