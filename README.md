@@ -18,10 +18,13 @@ exports.settings = {
     },
     css: {
         files : [
-            '/a.css',
-            '/b.css',
+            '/normalize.css',
+            '/general.css',
+            '/menu.css',
+            '/form.css',
+            '/button.css',
         ],
-        dump_into: '/c.css'
+        dump_into: '/style.css'
     },
     sass: [ '/assets/sass/style.scss', '/style.css' ]
 };
