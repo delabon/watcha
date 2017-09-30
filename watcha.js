@@ -3,9 +3,13 @@ var watch = require('node-watch');
 var cssmin = require('cssmin');
 var jsmin = require('jsmin').jsmin;
 var settings = require('./watcha.settings');
-const execSync = require('child_process').execSync;
+const exec = require('child_process').exec;
 
 settings = settings.settings;
+
+if( ! settings.hasOwnProperty('minify') ){
+	settings.minify = false;
+}
 
 /**
  * check if file exists
@@ -109,5 +113,5 @@ if( settings.hasOwnProperty('sass') ){
 		str += " --style compressed";
 	}
 
-	code = execSync( str );
+	code = exec( str );
 }
