@@ -67,6 +67,8 @@ function addContentToFile( files, final_file, type, minify ){
  */
 function startWatching( files, final_file, type, minify ){
 
+	console.log( "["+type.toUpperCase()+"]: " );
+
 	for( var i=0; i < files.length; i++ ){
 		var currentFile = __dirname + files[ i ];
 
@@ -80,6 +82,8 @@ function startWatching( files, final_file, type, minify ){
 			}
 		});
 	}
+
+	console.log( "--> " + final_file );
 }
 
 // watch for javascript files changes
@@ -114,4 +118,7 @@ if( settings.hasOwnProperty('sass') ){
 	}
 
 	code = exec( str );
+	console.log( "[SASS]: " );
+	console.log( __dirname + settings.sass[0] );
+	console.log( "--> " + __dirname + settings.sass[1] );
 }
